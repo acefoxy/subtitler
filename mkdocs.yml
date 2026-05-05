@@ -1,0 +1,26 @@
+site_name: subtitler
+site_description: Find online English subtitles and write synchronized SRT files next to your videos.
+site_url: https://acefoxy.github.io/subtitler/
+repo_url: https://github.com/acefoxy/subtitler
+repo_name: acefoxy/subtitler
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Folder Processing: folders.md
+  - Sync Strategy: sync.md
+  - Troubleshooting: troubleshooting.md

@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subtitler"
+version = "0.1.0"
+description = "Find online English subtitles and write synchronized SRT files next to your videos."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "acefoxy" }
+]
+keywords = ["subtitles", "srt", "video", "whisperx", "ffsubsync"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux"
+]
+dependencies = [
+  "subliminal>=2.2,<3"
+]
+
+[project.urls]
+Homepage = "https://github.com/acefoxy/subtitler"
+Documentation = "https://acefoxy.github.io/subtitler/"
+Repository = "https://github.com/acefoxy/subtitler"
+Issues = "https://github.com/acefoxy/subtitler/issues"
+
+[project.optional-dependencies]
+sync = [
+  "ffsubsync>=0.4,<1"
+]
+hq-sync = [
+  "whisperx>=3.3,<4"
+]
+docs = [
+  "mkdocs-material>=9.5,<10"
+]
+dev = [
+  "mkdocs-material>=9.5,<10"
+]
+
+[project.scripts]
+subtitler = "subtitler.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["subtitler*"]
